@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = '';
 
 export default function ReviewDashboard(){
   const [records, setRecords] = useState([]);
