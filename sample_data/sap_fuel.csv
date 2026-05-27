@@ -1,0 +1,5 @@
+document_number,plant,posting_date,material,quantity,uom,cost_center
+500001,PLANT_A,2026-05-01,Diesel,120.5,l,CC100
+500002,PLANT_B,01.05.2026,BioDiesel,45,litre,CC200
+500003,PLANT_A,2026/05/03,Diesel,30,gal,CC100
+500004,PLANT_C,2026-04-28,Diesel,500,liters,CC300

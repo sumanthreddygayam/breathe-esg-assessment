@@ -1,0 +1,4 @@
+document_number,plant,posting_date,material,quantity,uom,amount,currency
+600101,PLANT_A,2026-05-02,OfficePaper,50,ream,150,EUR
+600102,PLANT_B,2026-04-15,SteelRod,200,kg,1200,EUR
+600103,PLANT_C,15.05.2026,ChemSolvent,5,l,80,EUR

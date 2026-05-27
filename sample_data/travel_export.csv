@@ -1,0 +1,5 @@
+trip_id,employee_id,segment_type,origin,destination,distance_km,start_date,end_date
+T-1001,E-001,flight,AMS,LHR,360,2026-03-05,2026-03-05
+T-1002,E-002,car,,Berlin,120,2026-04-10,2026-04-10
+T-1003,E-003,flight,JFK,LAX,,2026-02-20,2026-02-20
+T-1004,E-004,hotel,,, ,2026-05-01,2026-05-03

@@ -1,0 +1,4 @@
+meter_id,start_date,end_date,consumption,unit,billing_amount,currency
+MTR-100,2026-04-01,2026-04-30,12500,kWh,1500,EUR
+MTR-101,2026-04-15,2026-05-14,9800,kWh,1200,EUR
+MTR-102,2026-03-25,2026-04-24,4300,kWh,520,EUR
