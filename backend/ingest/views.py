@@ -75,7 +75,15 @@ class UploadCsvView(APIView):
         if not file or not tenant_id:
             return Response({'detail': 'file and tenant_id required'}, status=status.HTTP_400_BAD_REQUEST)
 
-        tenant = Tenant.objects.get(pk=tenant_id)
+        try:
+            tenant_id_int = int(tenant_id)
+        except ValueError:
+            return Response({'detail': 'tenant_id must be a number'}, status=status.HTTP_400_BAD_REQUEST)
+
+        tenant, _ = Tenant.objects.get_or_create(
+            id=tenant_id_int,
+            defaults={'name': f'Tenant {tenant_id_int}'}
+        )
         raw = file.read().decode('utf-8')
         source = Source.objects.create(tenant=tenant, source_type=source_type, filename=getattr(file, 'name', None), raw_payload=raw)
 
