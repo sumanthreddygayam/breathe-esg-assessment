@@ -1,6 +1,8 @@
 from rest_framework import viewsets, status, permissions
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
+from django.contrib.auth import get_user_model
 from .models import Tenant, Source, EmissionRecord
 from .serializers import TenantSerializer, SourceSerializer, EmissionRecordSerializer
 import csv
@@ -124,3 +126,15 @@ class UploadCsvView(APIView):
             return Response({'detail': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response({'created': created})
+
+
+@api_view(['GET'])
+@permission_classes([permissions.AllowAny])
+def demo_token(request):
+    User = get_user_model()
+    user, created = User.objects.get_or_create(username='demo_analyst')
+    if created:
+        user.set_password('demo1234')
+        user.save()
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({'demo_token': token.key, 'username': 'demo_analyst', 'password': 'demo1234'})

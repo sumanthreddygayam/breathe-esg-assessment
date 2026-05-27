@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-# breathe-esg-assessment
-=======
- # Breathe ESG - Tech Intern Assignment Prototype
+# Breathe ESG - Tech Intern Assignment Prototype
 
- Prerequisites
+Prerequisites
  - Python 3.10+
  - Node.js 18+ and npm (or `corepack`)
  - Git
@@ -34,7 +31,7 @@ Quick start (local development)
  Demo credentials
  - Username: `demo_analyst`
  - Password: `demo1234`
- - Token: `abcd3cc578e77c77ce8be0bfdf84415d6d2842b2`
+ - Token: Fetch via GET `/api/demo-token/` on the deployed or local backend.
 
  Usage
  1. Start backend and frontend.
@@ -54,6 +51,7 @@ Quick start (local development)
  docker compose up --build
  ```
  - Then open `http://localhost:8000`.
+ - Live deployment: `https://breathe-esg-assessment.onrender.com/`
  - For container platforms such as Heroku or Render, connect a GitHub repository and use the included `Procfile` and Dockerfile.
  - Use `.env.example` to set `DJANGO_SECRET_KEY`, `DEBUG`, and `DJANGO_ALLOWED_HOSTS` in production.
  - If your local environment has Node but no npm, run `corepack enable` before frontend installation.
